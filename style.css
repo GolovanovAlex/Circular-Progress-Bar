@@ -32,7 +32,7 @@ body {
   position: relative;
   width: 150px;
   height: 150px;
-  background-color: #f00;
+  transform: rotate(270deg);
 }
 .percent svg {
   position: relative;
@@ -46,4 +46,9 @@ body {
   stroke: #191919;
   stroke-width: 2;
   transform: translate(5px, 5px);
+}
+.percent svg circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
 }
