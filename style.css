@@ -51,13 +51,31 @@ body {
   stroke: var(--clr);
   stroke-dasharray: 440;
   stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .dot {
   position: absolute;
   inset: 5px;
   z-index: 20;
-  transform: rotate(calc(3.6deg * var(--num)));
   animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
 }
 .dot::before {
   content: '';
@@ -70,4 +88,34 @@ body {
   border-radius: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
+}
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.number h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #fff;
+}
+.number h3 span {
+  font-size: 0.5em;
+  font-weight: 300;
+}
+.number p {
+  font-size: 0.75em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
 }
