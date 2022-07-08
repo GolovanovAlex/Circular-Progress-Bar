@@ -10,7 +10,7 @@
 
 [Demo Link <br>![CodePen](https://img.shields.io/badge/Codepen-000000?style=for-the-badge&logo=codepen&logoColor=white)](https://codepen.io/AlexGolovanov/pen/ZErqMON)
 
-![image](readme/img.gif)
+![circular](readme/circular.gif)
 
 ## Info
 
